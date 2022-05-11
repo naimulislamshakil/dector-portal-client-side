@@ -12,6 +12,7 @@ const Card = () => {
       titel: "Opening Hours",
       text: "8.00 AM - 9.00PM",
       bgColor: "bg-gradient-to-r from-secondary to-primary",
+      sliad: "fade-right",
     },
     {
       id: 2,
@@ -19,6 +20,7 @@ const Card = () => {
       titel: "Visit our location",
       text: "Brooklyn, NY 10036, United States",
       bgColor: "bg-accent",
+      sliad: "fade-down",
     },
     {
       id: 3,
@@ -26,6 +28,7 @@ const Card = () => {
       titel: "Contact us now",
       text: "+000 123 456789",
       bgColor: "bg-gradient-to-r from-secondary to-primary",
+      sliad: "fade-left",
     },
   ];
   return (

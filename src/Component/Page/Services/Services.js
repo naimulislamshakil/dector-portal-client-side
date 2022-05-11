@@ -11,18 +11,21 @@ const Services = () => {
       img: Fluoride,
       titel: "Fluoride Treatment",
       text: "Fluoride treatments are typically professional treatments containing a high concentration of fluoride that a dentist or hygienist will apply to a person's teeth to improve health and reduce the risk of cavities.",
+      sliad: "fade-right",
     },
     {
       id: 2,
       img: Cavity,
       titel: "Cavity Filling",
       text: "Fillings treat tooth decay, preventing further damage and tooth loss, as well as the possibility of pain and infection. A filling seals a hole, or cavity, in the tooth.",
+      sliad: "fade-up",
     },
     {
       id: 3,
       img: Teeth,
       titel: "Teeth Whitening",
       text: "Everyone notices a bright, white, glowing smile. And everyone notices how confident you feel when you have that beautiful smile.",
+      sliad: "fade-left",
     },
   ];
   return (
