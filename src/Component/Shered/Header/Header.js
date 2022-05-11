@@ -5,22 +5,34 @@ const Header = () => {
   const manuItem = (
     <>
       <li>
-        <Link to={"/"}>Home</Link>
+        <Link className="font-bold hover:bg-primary" to={"/"}>
+          Home
+        </Link>
       </li>
       <li>
-        <Link to={"/appointment"}>Appointment</Link>
+        <Link className="font-bold hover:bg-primary" to={"/appointment"}>
+          Appointment
+        </Link>
       </li>
       <li>
-        <Link to={"/review"}>Review</Link>
+        <Link className="font-bold hover:bg-primary" to={"/review"}>
+          Review
+        </Link>
       </li>
       <li>
-        <Link to={"/contact"}>Contact</Link>
+        <Link className="font-bold hover:bg-primary" to={"/contact"}>
+          Contact
+        </Link>
       </li>
       <li>
-        <Link to={"/about"}>About</Link>
+        <Link className="font-bold hover:bg-primary" to={"/about"}>
+          About
+        </Link>
       </li>
       <li>
-        <Link to={"/login"}>Login</Link>
+        <Link className="font-bold hover:bg-primary" to={"/login"}>
+          Login
+        </Link>
       </li>
     </>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import treatment from "../../../assets/images/treatment.png";
+import Button from "../../Shered/Button/Button";
 
 const ServiceHero = () => {
   return (
@@ -18,9 +19,7 @@ const ServiceHero = () => {
             here', making it look like readable English. Many desktop publishing
             packages and web page
           </p>
-          <button className="btn bg-gradient-to-r from-secondary to-primary outline-none text-white">
-            Get Started
-          </button>
+          <Button></Button>
         </div>
       </div>
     </div>
