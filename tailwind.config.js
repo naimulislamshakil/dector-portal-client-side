@@ -1,10 +1,7 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    backgroundImage: {
-      "hero-pattern": "url('/src/assets/images/bg.png')",
-      "footer-texture": "url('/img/footer-texture.png')",
-    },
+    extend: {},
   },
   daisyui: {
     themes: [
