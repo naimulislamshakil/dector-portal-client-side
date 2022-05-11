@@ -51,7 +51,7 @@ const Tastmonial = () => {
           <img className="w-3/4" src={quare} alt="" />
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-10 md:align-middle">
         {reviews.map((review) => (
           <TastmonialCard key={review.id} review={review}></TastmonialCard>
         ))}

@@ -12,7 +12,7 @@ const InfoCard = ({ info }) => {
         class={`card lg:card-side shadow-xl ${bgColor} transition ease-in-out delay-150  hover:translate-y-6  hover:scale-100  duration-300 text-white`}
       >
         <figure>
-          <img className="w-3/4 ml-10" src={img} alt="Album" />
+          <img className="w-3/4 sm:w-1/4 sm:mt-3 ml-10" src={img} alt="Album" />
         </figure>
         <div class="card-body">
           <h2 class="card-title">{titel}</h2>

@@ -13,10 +13,10 @@ const MakeApponment = () => {
         className="my-20 flex flex-col lg:flex-row justify-center items-center"
         style={{ background: `url(${appointment})` }}
       >
-        <div className="flex-1">
+        <div className="flex-1 hidden lg:block">
           <img className="mt-[-150px]" src={doctor} alt="" />
         </div>
-        <div className="flex-1 flex flex-col pr-10">
+        <div className="flex-1 flex flex-col pr-10 sm:pl-10 sm:pb-10 sm:pt-10">
           <h2 className="text-xl font-bold text-primary">Appointment</h2>
           <h2 className="text-4xl pt-3 text-white">
             Make an appointment Today
