@@ -5,6 +5,7 @@ import Card from "./Card";
 import ServiceHero from "../Services/ServiceHero";
 import MakeApponment from "../MakeApponment/MakeApponment";
 import Tastmonial from "../Tastmonial/Tastmonial";
+import HomeContact from "../HomeContact/HomeContact";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <ServiceHero></ServiceHero>
       <MakeApponment></MakeApponment>
       <Tastmonial></Tastmonial>
+      <HomeContact></HomeContact>
     </div>
   );
 };
