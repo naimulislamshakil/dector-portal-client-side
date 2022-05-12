@@ -6,6 +6,7 @@ import ServiceHero from "../Services/ServiceHero";
 import MakeApponment from "../MakeApponment/MakeApponment";
 import Tastmonial from "../Tastmonial/Tastmonial";
 import HomeContact from "../HomeContact/HomeContact";
+import Footer from "../../Shered/Footer/Footer";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <MakeApponment></MakeApponment>
       <Tastmonial></Tastmonial>
       <HomeContact></HomeContact>
+      <Footer></Footer>
     </div>
   );
 };

@@ -10,7 +10,7 @@ import Header from "./Component/Shered/Header/Header";
 
 function App() {
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home />} />
