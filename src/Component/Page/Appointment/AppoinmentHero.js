@@ -9,15 +9,21 @@ const AppoinmentHero = () => {
   const [date, setDate] = useState(new Date());
   return (
     <div>
-      <div class="hero min-h-screen" style={{ background: `url(${bg})` }}>
-        <div class="hero-content flex-col lg:flex-row-reverse">
-          <img src={chair} class="max-w-sm rounded-lg shadow-2xl" alt="" />
-          <div className="mr-10">
-            <DayPicker
-              mode="single"
-              selected={date}
-              onSelect={setDate}
-            ></DayPicker>
+      <div style={{ background: `url(${bg})` }}>
+        <div class="hero min-h-screen">
+          <div class="hero-content flex-col md:flex-row-reverse">
+            <img
+              src={chair}
+              class="w-sm rounded-lg shadow-2xl sm:w-1/4"
+              alt=""
+            />
+            <div className="lg:mr-10">
+              <DayPicker
+                mode="single"
+                selected={date}
+                onSelect={setDate}
+              ></DayPicker>
+            </div>
           </div>
         </div>
       </div>
