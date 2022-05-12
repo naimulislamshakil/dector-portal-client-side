@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import footer from "../../../assets/images/footer.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
 
 const Footer = () => {
   return (
-    <footer className="my-10" style={{ background: `url(${footer})` }}>
+    <div className="my-10 bg-footer">
       <div data-aos="fade-up">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           <div className="">
@@ -57,7 +56,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
+    </div>
   );
 };
 

@@ -1,9 +1,15 @@
 import React from "react";
+import "react-day-picker/dist/style.css";
+import AppoinmentCard from "./AppoinmentCard";
+import AppoinmentHero from "./AppoinmentHero";
+import Footer from "../../Shered/Footer/Footer";
 
 const Appointment = () => {
   return (
     <div>
-      <h2>Appointment</h2>
+      <AppoinmentHero></AppoinmentHero>
+      <AppoinmentCard></AppoinmentCard>
+      <Footer></Footer>
     </div>
   );
 };
