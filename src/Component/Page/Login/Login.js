@@ -1,6 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Button from "../../Shered/Button/Button";
 
 const Login = () => {
   return (
@@ -26,7 +24,12 @@ const Login = () => {
               />
             </div>
             <div class="flex items-center justify-center mt-5">
-              <Button>Login</Button>
+              <button
+                class="w-full btn btn-primary px-4 py-2 font-bold text-white rounded-full bg-gradient-to-r from-secondary to-primary focus:outline-none focus:shadow-outline"
+                type="button"
+              >
+                LogIn Account
+              </button>
             </div>
           </div>
         </form>
