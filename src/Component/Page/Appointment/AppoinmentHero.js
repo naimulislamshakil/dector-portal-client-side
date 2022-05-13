@@ -5,16 +5,15 @@ import "react-day-picker/dist/style.css";
 import bg from "../../../assets/images/bg.png";
 import { format } from "date-fns";
 
-const AppoinmentHero = () => {
-  const [date, setDate] = useState(new Date());
+const AppoinmentHero = ({ date, setDate }) => {
   return (
     <div>
       <div style={{ background: `url(${bg})` }}>
-        <div class="hero min-h-screen">
-          <div class="hero-content flex-col md:flex-row-reverse">
+        <div className="hero min-h-screen">
+          <div className="hero-content flex-col md:flex-row-reverse">
             <img
               src={chair}
-              class="w-sm rounded-lg shadow-2xl sm:w-1/4"
+              className="w-sm rounded-lg shadow-2xl sm:w-1/4"
               alt=""
             />
             <div className="lg:mr-10">

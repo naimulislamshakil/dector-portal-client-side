@@ -19,12 +19,12 @@ const HomeContact = () => {
           <input
             type="text"
             placeholder="Enter Your Name"
-            class="input input-bordered mt-3"
+            className="input input-bordered mt-3"
           />
           <input
             type="text"
             placeholder="Subject..."
-            class="input input-bordered mt-3"
+            className="input input-bordered mt-3"
           />
 
           <textarea
@@ -32,7 +32,7 @@ const HomeContact = () => {
             cols="50"
             type="text"
             placeholder="Enter Your Massage.."
-            class="input input-bordered mt-3 mb-3"
+            className="input input-bordered mt-3 mb-3"
           />
           <div className="flex justify-center">
             <Button>Submit</Button>
