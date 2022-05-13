@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import SocialMedia from "../../Shered/SocialMedia/SocialMedia";
 
 const Login = () => {
@@ -32,6 +33,16 @@ const Login = () => {
                 LogIn Account
               </button>
             </div>
+
+            <div class="text-center my-6">
+              <Link
+                class="inline-block text-sm text-blue-500 align-baseline font-bold hover:text-blue-800"
+                to="/login"
+              >
+                No Account Yet! Register!
+              </Link>
+            </div>
+
             <div class="divider">OR</div>
             <div>
               <SocialMedia></SocialMedia>

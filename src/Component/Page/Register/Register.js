@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import SocialMedia from "../../Shered/SocialMedia/SocialMedia";
 
 const Register = () => {
   return (
@@ -94,23 +96,25 @@ const Register = () => {
                 Register Account
               </button>
             </div>
-            <div class="divider">OR</div>
             <div class="text-center">
-              <a
+              <Link
                 class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-                href="#"
+                to="#"
               >
                 Forgot Password?
-              </a>
+              </Link>
             </div>
             <div class="text-center">
-              <a
+              <Link
                 class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-                href="./index.html"
+                to="/login"
               >
                 Already have an account? Login!
-              </a>
+              </Link>
             </div>
+            <div class="divider">OR</div>
+
+            <SocialMedia></SocialMedia>
           </form>
         </div>
       </div>
