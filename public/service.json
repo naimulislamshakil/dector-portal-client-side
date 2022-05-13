@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Winson Herry",
+    "location": "Califonia",
+    "review": "Director Nelson weaves an intricate, entertaining, socially relevant and extremely likable film in his latest film.. Doctor. A host of excellent artistes and a magical musical score by Aniruddh adds to the charm.",
+    "img": "https://i.ibb.co/X50Lkpc/people1.png",
+    "slied": "fade-up"
+  },
+  {
+    "name": "Richard N Nees",
+    "location": "New York",
+    "review": "Siva Karthikeyan is the biggest highlight of the film as he showcases a different side to his personality. He as an army doctor evokes good comedy, drama, and carries the film on his shoulder. ",
+    "img": "https://i.ibb.co/jzVBpb2/people2.png",
+    "slied": "fade-down"
+  },
+  {
+    "name": "Tina D McClure",
+    "location": "Arizona",
+    "review": "Well scripted Dark Humour Comedy. When it comes to the comedy genre, we shouldn't expect the logics. So I strongly say there was no lacks. Siva and Vinay character designed very well.",
+    "img": "https://i.ibb.co/qrHZ6LH/people3.png",
+    "slied": "fade-up-right"
+  }
+]

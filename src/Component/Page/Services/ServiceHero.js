@@ -10,7 +10,11 @@ const ServiceHero = () => {
     <div data-aos="zoom-in-up">
       <div className="hero min-h-screen">
         <div className="hero-content flex-col lg:flex-row">
-          <img src={treatment} className="max-w-sm rounded-lg shadow-2xl" />
+          <img
+            src={treatment}
+            className="max-w-sm rounded-lg shadow-2xl"
+            alt=""
+          />
           <div className="px-20">
             <h1 className="text-5xl font-bold">
               Exceptional Dental Care, on Your Terms
