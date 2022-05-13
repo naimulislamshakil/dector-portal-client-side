@@ -36,7 +36,7 @@ const Header = () => {
       </li>
       <li>
         <Link className="font-bold hover:bg-primary" to={"/singup"}>
-          Sing Up
+          Register
         </Link>
       </li>
     </>

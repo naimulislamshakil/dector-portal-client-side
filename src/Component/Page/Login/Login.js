@@ -1,4 +1,5 @@
 import React from "react";
+import SocialMedia from "../../Shered/SocialMedia/SocialMedia";
 
 const Login = () => {
   return (
@@ -30,6 +31,10 @@ const Login = () => {
               >
                 LogIn Account
               </button>
+            </div>
+            <div class="divider">OR</div>
+            <div>
+              <SocialMedia></SocialMedia>
             </div>
           </div>
         </form>
