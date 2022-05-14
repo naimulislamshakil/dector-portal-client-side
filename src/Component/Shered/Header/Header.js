@@ -1,7 +1,15 @@
+import { signOut } from "firebase/auth";
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import auth from "../../../firebase.config";
 
 const Header = () => {
+  const [user] = useAuthState(auth);
+  const logout = () => {
+    signOut(auth);
+  };
+
   const manuItem = (
     <>
       <li>
@@ -29,16 +37,30 @@ const Header = () => {
           About
         </Link>
       </li>
-      <li>
-        <Link className="font-bold hover:bg-primary" to={"/login"}>
-          Login
-        </Link>
-      </li>
-      <li>
-        <Link className="font-bold hover:bg-primary" to={"/singup"}>
-          Register
-        </Link>
-      </li>
+      {user ? (
+        <li>
+          <Link
+            onClick={logout}
+            className="font-bold hover:bg-primary"
+            to={"/login"}
+          >
+            LogOut
+          </Link>
+        </li>
+      ) : (
+        <>
+          <li>
+            <Link className="font-bold hover:bg-primary" to={"/login"}>
+              Login
+            </Link>
+          </li>
+          <li>
+            <Link className="font-bold hover:bg-primary" to={"/singup"}>
+              Register
+            </Link>
+          </li>
+        </>
+      )}
     </>
   );
 
@@ -55,9 +77,9 @@ const Header = () => {
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M4 6h16M4 12h8m-8 6h16"
               />
             </svg>

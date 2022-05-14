@@ -9,6 +9,8 @@ import Register from "./Component/Page/Register/Register";
 import Review from "./Component/Page/Review/Review";
 import Header from "./Component/Shered/Header/Header";
 import NotFound from "./Component/Shered/NotFound/NotFound";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
         <Route path="singup" element={<Register />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <ToastContainer />
     </div>
   );
 }

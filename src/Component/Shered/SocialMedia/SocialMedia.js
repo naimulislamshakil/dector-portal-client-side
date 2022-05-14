@@ -28,18 +28,18 @@ const SocialMedia = () => {
   return (
     <div>
       <div className="flex justify-evenly">
-        <div onClick={() => signInWithFacebook()} class="avatar">
-          <div class="w-14 mask mask-hexagon">
+        <div onClick={() => signInWithFacebook()} className="avatar">
+          <div className="w-14 mask mask-hexagon">
             <img src={fb} alt="" />
           </div>
         </div>
-        <div onClick={() => signInWithGoogle()} class="avatar">
-          <div class="w-14 mask mask-hexagon">
+        <div onClick={() => signInWithGoogle()} className="avatar">
+          <div className="w-14 mask mask-hexagon">
             <img src={google} alt="" />
           </div>
         </div>
-        <div onClick={() => signInWithGithub()} class="avatar">
-          <div class="w-14 mask mask-hexagon">
+        <div onClick={() => signInWithGithub()} className="avatar">
+          <div className="w-14 mask mask-hexagon">
             <img src={github} alt="" />
           </div>
         </div>
