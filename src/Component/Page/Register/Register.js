@@ -1,18 +1,23 @@
 import { useState } from "react";
 import {
+  useAuthState,
   useCreateUserWithEmailAndPassword,
   useSendEmailVerification,
+  useSendPasswordResetEmail,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.config";
 import Loading from "../../Shered/Loading/Loading";
 import SocialMedia from "../../Shered/SocialMedia/SocialMedia";
+import { toast } from "react-toastify";
 import "./Register.css";
 
 const Register = () => {
+  const [sendPasswordResetEmail, sending1] = useSendPasswordResetEmail(auth);
+  const [user] = useAuthState(auth);
   const [agree, setAgree] = useState(false);
-  const [createUserWithEmailAndPassword, user, loading] =
+  const [createUserWithEmailAndPassword, loading] =
     useCreateUserWithEmailAndPassword(auth);
   const [updateProfile, updating] = useUpdateProfile(auth);
   const [sendEmailVerification, sending] = useSendEmailVerification(auth);
@@ -30,16 +35,32 @@ const Register = () => {
       document.getElementById("pass-text").style.display = "none";
       await createUserWithEmailAndPassword(email, password);
       await updateProfile({ displayName: name });
-      await sendEmailVerification();
+      if (
+        user.providerData[0].providerId === "password" &&
+        !user.emailVerified
+      ) {
+        await sendEmailVerification();
+      }
     } else {
       document.getElementById("pass-text").style.display = "block";
     }
   };
+
+  const resetPassword = async () => {
+    const email = user?.user?.email;
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast("Sent email");
+    } else {
+      toast("please enter your email address");
+    }
+  };
+
   if (user) {
     navigate("/");
   }
 
-  if (loading || updating || sending) {
+  if (loading || updating || sending || sending1) {
     return <Loading></Loading>;
   }
 
@@ -173,6 +194,7 @@ const Register = () => {
             </div>
             <div className="text-center">
               <Link
+                onClick={resetPassword}
                 className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
                 to="#"
               >

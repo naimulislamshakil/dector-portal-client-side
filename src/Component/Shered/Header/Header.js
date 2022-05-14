@@ -38,15 +38,22 @@ const Header = () => {
         </Link>
       </li>
       {user ? (
-        <li>
-          <Link
-            onClick={logout}
-            className="font-bold hover:bg-primary"
-            to={"/login"}
-          >
-            LogOut
-          </Link>
-        </li>
+        <>
+          <li>
+            <Link className="font-bold hover:bg-primary" to={"/login"}>
+              Booking Appointment
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={logout}
+              className="font-bold hover:bg-primary"
+              to={"/login"}
+            >
+              LogOut
+            </Link>
+          </li>
+        </>
       ) : (
         <>
           <li>

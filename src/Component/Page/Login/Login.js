@@ -1,11 +1,16 @@
 import React from "react";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.config";
 import Loading from "../../Shered/Loading/Loading";
 import SocialMedia from "../../Shered/SocialMedia/SocialMedia";
+import { toast } from "react-toastify";
 
 const Login = () => {
+  const [sendPasswordResetEmail, sending1] = useSendPasswordResetEmail(auth);
   const [signInWithEmailAndPassword, loading, user] =
     useSignInWithEmailAndPassword(auth);
   const navigate = useNavigate();
@@ -16,12 +21,21 @@ const Login = () => {
     const password = event.target.password.value;
     await signInWithEmailAndPassword(email, password);
   };
-
+  const resetPassword = async (event) => {
+    const email = document.getElementById("email").value;
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast("Sent email");
+    } else {
+      toast("please enter your email address");
+    }
+  };
   if (user) {
     navigate("/");
+    console.log(user);
   }
 
-  if (loading) {
+  if (loading || sending1) {
     return <Loading></Loading>;
   }
 
@@ -35,6 +49,7 @@ const Login = () => {
           <div className="mt-4">
             <div>
               <input
+                id="email"
                 name="email"
                 type="email"
                 placeholder="Email"
@@ -58,11 +73,19 @@ const Login = () => {
                 required
               />
             </div>
-
-            <div className="text-center my-6">
+            <div className="text-center mt-6">
+              <Link
+                onClick={resetPassword}
+                className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+                to="#"
+              >
+                Forgot Password?
+              </Link>
+            </div>
+            <div className="text-center">
               <Link
                 className="inline-block text-sm text-blue-500 align-baseline font-bold hover:text-blue-800"
-                to="/login"
+                to="/singup"
               >
                 No Account Yet! Register!
               </Link>

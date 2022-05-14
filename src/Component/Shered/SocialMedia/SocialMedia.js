@@ -19,6 +19,7 @@ const SocialMedia = () => {
 
   if (user || user1 || user2) {
     navigation("/");
+    console.log(user2);
   }
 
   if (loading || loading1 || loading2) {
