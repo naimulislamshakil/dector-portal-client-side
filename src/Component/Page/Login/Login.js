@@ -3,7 +3,7 @@ import {
   useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.config";
 import Loading from "../../Shered/Loading/Loading";
 import SocialMedia from "../../Shered/SocialMedia/SocialMedia";
@@ -14,6 +14,9 @@ const Login = () => {
   const [signInWithEmailAndPassword, loading, user] =
     useSignInWithEmailAndPassword(auth);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
 
   const fromHandeler = async (event) => {
     event.preventDefault();
@@ -31,8 +34,7 @@ const Login = () => {
     }
   };
   if (user) {
-    navigate("/");
-    console.log(user);
+    navigate(from, { replace: true });
   }
 
   if (loading || sending1) {

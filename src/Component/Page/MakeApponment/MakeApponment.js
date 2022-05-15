@@ -1,9 +1,9 @@
 import React from "react";
-import Button from "../../Shered/Button/Button";
 import doctor from "../../../assets/images/doctor.png";
 import appointment from "../../../assets/images/appointment.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 AOS.init();
 
 const MakeApponment = () => {
@@ -30,7 +30,12 @@ const MakeApponment = () => {
             complete online web-based (also have an app) telemedicine service in
             USA. We have visitors from various parts of the world as well.
           </p>
-          <Button>Get Started</Button>
+          <Link
+            to="/appointment"
+            className="btn btn-primary bg-gradient-to-r from-secondary to-primary outline-none w-2/4 text-white"
+          >
+            Make Apponment
+          </Link>
         </div>
       </div>
     </section>

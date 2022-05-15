@@ -11,6 +11,7 @@ import Header from "./Component/Shered/Header/Header";
 import NotFound from "./Component/Shered/NotFound/NotFound";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import RequireAuth from "./Component/Shered/RequireAuth/RequireAuth";
 
 function App() {
   return (
@@ -22,7 +23,14 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="review" element={<Review />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="appointment" element={<Appointment />} />
+        <Route
+          path="appointment"
+          element={
+            <RequireAuth>
+              <Appointment />
+            </RequireAuth>
+          }
+        />
         <Route path="singup" element={<Register />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

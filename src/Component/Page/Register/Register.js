@@ -47,7 +47,7 @@ const Register = () => {
   };
 
   const resetPassword = async () => {
-    const email = user?.user?.email;
+    const email = document.getElementById("email").value;
     if (email) {
       await sendPasswordResetEmail(email);
       toast("Sent email");
