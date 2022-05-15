@@ -13,6 +13,10 @@ const BookingModal = ({ date, treatment, setTreatment }) => {
     const hour = event.target.hour.value;
     console.log(name, hour);
 
+    // const apponmentDetils = {
+    //   name,
+    // };
+
     // to close the modal
     setTreatment(null);
   };
